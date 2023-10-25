@@ -15,10 +15,19 @@ class TestCircle:
     def test_area(self):
         assert self.circle.area() == math.pi * self.circle.radius ** 2
 
+    def test_not_equal_area(self, my_rectangle):
+        print("length")
+        print(my_rectangle.length)
+        print(my_rectangle.area())
+        print(self.circle.area())
+        assert self.circle.area() != my_rectangle.area()
+
     def test_perimeter(self):
         expected = self.circle.radius * 2 * math.pi
         result = self.circle.perimeter()
         assert expected == result
+
+
 
 
 class TestRectangle:
